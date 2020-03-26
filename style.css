@@ -191,3 +191,37 @@ footer a:hover {
     align-items: center;
   }
   
+/* Now adding navigation to the site */
+/* first applying logo style */
+  .navigation-logo {
+    font-size: 3rem;
+    color: var(--theme-color-primary);
+  } 
+  /* now adjust the ul representing our nav-bar. make it flex-box so we can place it nicely on the sides. */
+  nav {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+/* the menu bar is displayed horizontally - do we apply inline display. As the list items are supposed to fill out the whole container, li + li only selects list items which have another list item before them. In cinsequence, the margin doesn´t apply to the first li. */
+  .navigation-menu-desktop li {
+    display: inline;
+  }
+  .navigation-menu-desktop li + li {
+    margin-left: 2rem;
+  }
+/* stylink of the links */
+  nav a {
+    color: var(--text-color-primary);
+  }
+  nav a:hover {
+    color: var(--theme-color-primary);
+    text-decoration: none;
+  }
+/* smooth scrolling, when clicking a link makes the orientation easier for users */
+  html {
+    scroll-behavior: smooth;
+  }

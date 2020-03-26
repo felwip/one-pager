@@ -54,4 +54,22 @@ button {  border: none;  background: none;} --> sets default button styling
 Then go to section layout.
 --> look up comments in the style.css
 
-## Third step to come up
+## Third step - Navigation bar
+
+Now we set up the navigation of the site.
+
+First we add the html-code for the navigation menu as an unordered list in an extra `html <nav>` element.
+
+Adding styling to the navigation logo. Adjusting styling of the nav-list as a flexbox. Look at the CSS-Code!
+
+We apply smooth scrolling through the CSS-command:
+
+````css
+html {
+  scroll-behavior: smooth;
+} ```
+````
+
+We set the styling of navigation and some link comfort.
+
+## Fourth step to come up
