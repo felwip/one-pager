@@ -72,4 +72,16 @@ html {
 
 We set the styling of navigation and some link comfort.
 
-## Fourth step to come up
+## Fourth step - making the page responsive
+
+Problems appear, when inspecting the onepager in responsive mode: headings too big, navigation bar crashes, showcase and elements sections are looking weird, social links.
+
+Using media-queries we cann add an additional styling, when the given conditions apply:
+
+`````css
+@media (max-width: 600px) {
+  selector { properties: Values; }
+  selector { properties: Values; }
+  selector { properties: Values; }
+} ````
+`````
