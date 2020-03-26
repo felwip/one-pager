@@ -40,14 +40,18 @@ Finally commit changes in setup to remote, checkout master, merge with html bran
 
 First we add default CSS-settings to the document (\*, li, img, button, body)
 
-````* {padding: 0;margin: 0;outline: none;box-shadow: none;box-sizing: border-box;} --> sets default margin, padding to 0; Outline would be outside the border, we set it default to 0; box-shadow none; box-sizing: border-box means, that padding and margin are being substracted from the given Height & width of the box, instead of being added.
+```css
+* {padding: 0;margin: 0;outline: none;box-shadow: none;box-sizing: border-box;} --> sets default margin, padding to 0; Outline would be outside the border, we set it default to 0; box-shadow none; box-sizing: border-box means, that padding and margin are being substracted from the given Height & width of the box, instead of being added.
 
 li {list-style-type: none;} --> leaves out the list-dots
 
 img {width: 100%;  object-fit: cover;} --> default img setting to cover the whole parent container and cover other elements; object fit will zoom the picture to fit the given width and otherwise cut the edges - with fill it would always be fully displayed
 
-button {  border: none;  background: none;} --> sets default button styling ```
+button {  border: none;  background: none;} --> sets default button styling
+```
 
+
 Then go to section layout.
 --> look up comments in the style.css
-````
+
+## Third step to come up
