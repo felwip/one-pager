@@ -85,3 +85,29 @@ Using media-queries we cann add an additional styling, when the given conditions
   selector { properties: Values; }
 } ````
 `````
+
+## Fifth step - mobile navigation; adding Java Script
+
+We add a button to the menu bar, which applies at max-width of 600px. The menu should hide and we acces a dropdown via button.
+In Html we add the sections and classes for the button as well as the hidden elements - inside the nav element.
+In CSS we give the new classes attributes so that they hide and be responsive.
+
+After this we add code for the slide menu itself.
+Starting with html code again - inside the nav element.
+Next adding CSS to the new html classes inside nav.
+
+### Java Script
+
+New file index.js
+create link from html to js in the head
+
+```html
+<script src="index.js" defer></script>
+```
+
+Now create variables for our functions of expanding and collapsing the menu bar as well as for the buttons expand and collapse.
+These are joined in an
+
+```js
+addEventListener("click", --name of the function--)
+```

@@ -149,7 +149,7 @@ footer a:hover {
   margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;‚
+  justify-content: space-around;
 }
 
 /* In the showcase we set the container to flex again. Then both inside-boxes appear next to each other */
@@ -166,67 +166,67 @@ footer a:hover {
   width: 50%;
 }
 
-  /* Also align the contact content */
-  .contact {
-    text-align: center;
-  }
-  
-  /* On the footer, we height of the box is set by the maximum content, thus the footer-copyright div. Font- and Logo-sizes are applied as well as margins, alignment and justification via flex-container. */
-  .footer-logo {
-    font-size: 2.5rem;
-    margin: 1rem 0;
-  }
-  .footer-links {
-    font-size: 1.3rem;
-  }  
-  .footer-links li {
-    display: inline;
-  }
-  .footer-links li:not(:first-child) {
-    margin-left: 1em;
-  }
-  .footer-inner-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-/* Now adding navigation to the site */
-/* first applying logo style */
-  .navigation-logo {
-    font-size: 3rem;
-    color: var(--theme-color-primary);
-  } 
-  /* now adjust the ul representing our nav-bar. make it flex-box so we can place it nicely on the sides. */
-  nav {
-    max-width: 70rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-  }
-/* the menu bar is displayed horizontally - do we apply inline display. As the list items are supposed to fill out the whole container, li + li only selects list items which have another list item before them. In cinsequence, the margin doesn´t apply to the first li. */
-  .navigation-menu-desktop li {
-    display: inline;
-  }
-  .navigation-menu-desktop li + li {
-    margin-left: 2rem;
-  }
-/* stylink of the links */
-  nav a {
-    color: var(--text-color-primary);
-  }
-  nav a:hover {
-    color: var(--theme-color-primary);
-    text-decoration: none;
-  }
-/* smooth scrolling, when clicking a link makes the orientation easier for users */
-  html {
-    scroll-behavior: smooth;
-  }
+/* Also align the contact content */
+.contact {
+  text-align: center;
+}
 
-/* Adding media queries to make the style responsive */
+/* On the footer, we height of the box is set by the maximum content, thus the footer-copyright div. Font- and Logo-sizes are applied as well as margins, alignment and justification via flex-container. */
+.footer-logo {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.footer-links {
+  font-size: 1.3rem;
+}
+.footer-links li {
+  display: inline;
+}
+.footer-links li:not(:first-child) {
+  margin-left: 1em;
+}
+.footer-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- 3 --- Now adding navigation to the site */
+/* first applying logo style */
+.navigation-logo {
+  font-size: 3rem;
+  color: var(--theme-color-primary);
+}
+/* now adjust the ul representing our nav-bar. make it flex-box so we can place it nicely on the sides. */
+nav {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+/* the menu bar is displayed horizontally - do we apply inline display. As the list items are supposed to fill out the whole container, li + li only selects list items which have another list item before them. In cinsequence, the margin doesn´t apply to the first li. */
+.navigation-menu-desktop li {
+  display: inline;
+}
+.navigation-menu-desktop li + li {
+  margin-left: 2rem;
+}
+/* stylink of the links */
+nav a {
+  color: var(--text-color-primary);
+}
+nav a:hover {
+  color: var(--theme-color-primary);
+  text-decoration: none;
+}
+/* smooth scrolling, when clicking a link makes the orientation easier for users */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- 4 --- Adding media queries to make the style responsive */
 @media (max-width: 600px) {
   h1 {
     font-size: 2.5rem;
@@ -263,4 +263,46 @@ footer a:hover {
 /* For the footer we only need a flex-wrap as it automatically wraps the boxes, if there ain't enough space */
 .footer-inner-container {
   flex-wrap: wrap;
+}
+
+/* --- 5 --- We add responsive styling to the new button and hidden menu bar */
+.navigation-menu-mobile-collapsed {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+@media (max-width: 600px) {
+  .navigation-menu-mobile-collapsed {
+    display: initial;
+  }
+}
+/* extra-styling on the navigation button */
+.navigation-button {
+  color: var(--theme-color-primary);
+  margin: 1rem 0;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* CSS for new classes of the expanded mobile menu bar */
+.navigation-menu-mobile {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  padding: 1rem 2rem;
+  background-color: var(--bg-color-secondary);
+  text-align: right;
+}
+/* new visibility properties on the menu bar, so it will come in smoothly from the side (translateX from 100% to 0% in the next class*/
+.navigation-menu-mobile {
+  transform: translateX(100%);
+  transition: all 0.5s;
+  visibility: hidden;
+}
+/* here we have two classes - make sure that the first class is the class of a parent element (( we will only add the class to the parent element with an EventListener in JavaScript )) !!! */
+.mobile-navigation-expanded .navigation-menu-mobile {
+  visibility: visible;
+  transform: translateX(0);
 }
