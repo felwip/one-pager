@@ -6,6 +6,7 @@
   --text-color-light: rgb(250, 248, 248);
   --bg-color-light: rgb(252, 245, 245);
   --bg-color-secondary: rgb(242, 245, 246);
+  --bg-color-alternative-dark: rgb(230, 231, 240);
   --bg-color-dark: rgb(58, 56, 56);
 }
 /* Generel settings */
@@ -213,6 +214,7 @@ nav {
 .navigation-menu-desktop li + li {
   margin-left: 2rem;
 }
+
 /* stylink of the links */
 nav a {
   color: var(--text-color-primary);
@@ -241,7 +243,7 @@ html {
     font-size: 1.2rem;
   }
 }
-/* hide a potential navigation side bar */
+/* hide the menu bar list on top at certain width */
 @media (max-width: 600px) {
   .navigation-menu-desktop {
     display: none;
@@ -305,4 +307,21 @@ html {
 .mobile-navigation-expanded .navigation-menu-mobile {
   visibility: visible;
   transform: translateX(0);
+}
+
+.darkmode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-light);
+}
+
+.darkmode .card {
+  background-color: var(--bg-color-alternative-dark);
+  color: var(--text-color-medium);
+}
+
+.darkmode h1 {
+  color: var(--text-color-medium);
+}
+.darkmode h3 {
+  color: var(--text-color-medium);
 }

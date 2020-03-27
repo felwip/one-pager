@@ -19,3 +19,12 @@ expandButton.addEventListener("click", expandMobileNavigation);
 // the same to hide the mobile menu again
 var collapseButton = document.querySelector("#collapse-mobile-navigation");
 collapseButton.addEventListener("click", collapseMobileNavigation);
+
+// Darkmode
+var toggleClassButton = function(buttonID, className) {
+  var toggleClass = function() {
+    document.querySelector("main").classList.toggle(className);
+  };
+  document.querySelector(buttonID).addEventListener("click", toggleClass);
+};
+toggleClassButton("a.dark-mode-button", "darkmode");

@@ -111,3 +111,5 @@ These are joined in an
 ```js
 addEventListener("click", --name of the function--)
 ```
+
+## From here on it's customization
