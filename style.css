@@ -241,3 +241,26 @@ footer a:hover {
     font-size: 1.2rem;
   }
 }
+/* hide a potential navigation side bar */
+@media (max-width: 600px) {
+  .navigation-menu-desktop {
+    display: none;
+  }
+}
+/* splitting text and media from showcase section*/
+@media (max-width: 860px) {
+  .split {
+    flex-wrap: wrap;
+  }
+  .split-media,
+  .split-text {
+    width: 100%;
+  }
+  .split-media {
+    margin-bottom: 2rem;
+  }
+}
+/* For the footer we only need a flex-wrap as it automatically wraps the boxes, if there ain't enough space */
+.footer-inner-container {
+  flex-wrap: wrap;
+}
