@@ -19,7 +19,7 @@ expandButton.addEventListener("click", expandMobileNavigation);
 // the same to hide the mobile menu again
 var collapseButton = document.querySelector("#collapse-mobile-navigation");
 collapseButton.addEventListener("click", collapseMobileNavigation);
-
+// ----------------------------------------------------
 // Darkmode
 var toggleClassButton = function(buttonID, className) {
   var toggleClass = function() {
@@ -27,4 +27,18 @@ var toggleClassButton = function(buttonID, className) {
   };
   document.querySelector(buttonID).addEventListener("click", toggleClass);
 };
-toggleClassButton("a.dark-mode-button", "darkmode");
+toggleClassButton("a.darkmode-button", "darkmode");
+toggleClassButton("a.light-button", "darkmode");
+// ----------------------------------------------------
+// switching buttons buttons
+
+var toggleHideClass = function(hidingButton, showingButton) {
+  var toggleHide = function() {
+    document.querySelector(hidingButton).classList.add("hide-button");
+    document.querySelector(showingButton).classList.remove("hide-button");
+  };
+  document.querySelector(hidingButton).addEventListener("click", toggleHide);
+};
+toggleHideClass("a.darkmode-button", "a.light-button");
+toggleHideClass("a.light-button", "a.darkmode-button");
+//are the selectors right? --> CSS diner

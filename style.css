@@ -244,7 +244,7 @@ html {
   }
 }
 /* hide the menu bar list on top at certain width */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .navigation-menu-desktop {
     display: none;
   }
@@ -274,7 +274,7 @@ html {
   top: 1rem;
   right: 1rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .navigation-menu-mobile-collapsed {
     display: initial;
   }
@@ -309,6 +309,7 @@ html {
   transform: translateX(0);
 }
 
+/* Installing Darkmode */
 .darkmode {
   background-color: var(--bg-color-dark);
   color: var(--text-color-light);
@@ -324,4 +325,9 @@ html {
 }
 .darkmode h3 {
   color: var(--text-color-medium);
+}
+/* Making a shift on Dark / Light buttons depending on mode */
+
+.hide-button {
+  display: none;
 }
