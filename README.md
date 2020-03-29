@@ -1,3 +1,7 @@
+https://felwip.github.io/one-pager/
+
+https://fervent-heisenberg-9c3ec3.netlify.com/
+
 # One Pager Tutorial
 
 This is a tutorial on how to build a simple one pager website using vanilla html css and javascript.
